@@ -95,7 +95,8 @@ button, input, textarea { font-family: inherit; }
 }
 .plate {
   position: relative; overflow: hidden; width: min(72vw, 320px);
-  padding: 40px 20px 22px; border-radius: 999px 999px 24px 24px;
+  padding: 0; border-radius: 999px 999px 24px 24px;
+  aspect-ratio: 8 / 9;
   background: radial-gradient(circle at 50% 28%, #fbf5e6 0, #efe3cc 62%, #dcc9a2 100%);
   border: 3px solid var(--gold);
   box-shadow: 0 0 0 6px var(--ink), 0 0 0 8px rgba(212, 169, 78, .75),
@@ -105,7 +106,7 @@ button, input, textarea { font-family: inherit; }
   content: ""; position: absolute; inset: 9px; z-index: 2; pointer-events: none;
   border: 1px solid rgba(160, 112, 24, .55); border-radius: 999px 999px 16px 16px;
 }
-.plate .logo { position: relative; z-index: 1; width: 100%; height: auto; }
+.plate .logo { position: relative; z-index: 1; display: block; width: 100%; height: 100%; object-fit: cover; }
 .hero .plate { animation: plateIn 1.4s var(--ease) both; }
 .hero .plate .logo { animation: logoIn 1.2s var(--ease) .5s both; }
 .hero .plate::after {
@@ -528,7 +529,7 @@ main { display: block; max-width: 1180px; margin: 0 auto; padding: 8px 14px 40px
     var(--star), var(--black);
 }
 .footer-inner { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 14px; }
-.plate.sm { width: 120px; padding: 16px 10px 10px; border-width: 2px; border-radius: 999px 999px 16px 16px; }
+.plate.sm { width: 120px; padding: 0; border-width: 2px; border-radius: 999px 999px 16px 16px; }
 .plate.sm::before { inset: 6px; }
 .footer h2 {
   font-family: 'Aref Ruqaa', 'Cairo', serif; font-weight: 700; font-size: 1.5rem;
